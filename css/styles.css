@@ -40,12 +40,22 @@
     box-shadow: 0 0 0 0.2rem rgba(255, 107, 132,0.25);
 }
 
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #FB688B;
+}
+
 .form-control {
     border: 1px solid #FF7E3C;
 }
 
-#body-image{
-    display: flex;
-    justify-items: center;
-    vertical-align: middle;
+.body-image{
+    margin-top: 25%;
+    margin-left: 5%;
 }
+
+#body-image-container{
+  display: flex;
+}
+
