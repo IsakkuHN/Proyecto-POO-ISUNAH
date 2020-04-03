@@ -199,3 +199,19 @@
   left: 100%;
   margin-top: -1px;
 }
+
+.bannerEmpresa{
+  height: 300px; 
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-size: cover; 
+  position: relative;
+}
+
+.bannerContenido{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}

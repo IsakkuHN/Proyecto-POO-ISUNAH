@@ -26,43 +26,39 @@
             </p>
         </div>
         <div class="ocultar">
-            <div class="form-label-group">
-                <input type="text" id="inputName" class="form-control" placeholder="Nombre de la empresa" required
-                    autofocus />
-                <label for="inputEmail">Nombre de la empresa</label>
+            <div >
+                <div class="form-label-group ">
+                    <input type="text" id="inputName" class="form-control" placeholder="Nombre de la empresa" required
+                        autofocus />
+                    <label for="inputEmail">Nombre de la empresa</label>
+                </div>
+                <div class="form-label-group ">
+                    <input type="text" id="inputPais" class="form-control" placeholder="Pais" required autofocus />
+                    <label for="inputEmail">Pais</label>
+                </div>
             </div>
-
-            <div class="form-label-group">
-                <input type="text" id="inputPais" class="form-control" placeholder="Pais" required autofocus />
-                <label for="inputEmail">Pais</label>
-            </div>
-
             <div class="form-label-group">
                 <input type="text" id="inputDireccion" class="form-control" placeholder="Direccion" required
                     autofocus />
                 <label for="inputDireccion">Direccion</label>
             </div>
+            <div class="form-row">
+                <div class="input-group mb-3 col-6">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input form-control" id="inputFoto"
+                            aria-describedby="inputFile1">
+                        <label class="custom-file-label" for="inputFoto">Foto de Perfil</label>
+                    </div>
+                </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputFile1">Subir</span>
+                <div class="input-group mb-3 col-6">
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input form-control" id="inputBanner"
+                            aria-describedby="inputFile2">
+                        <label class="custom-file-label" for="inputBanner">Portada</label>
+                    </div>
                 </div>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input form-control" id="inputFoto"
-                        aria-describedby="inputFile1">
-                    <label class="custom-file-label" for="inputFoto">Foto de Perfil</label>
-                </div>
-            </div>
 
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" id="inputFile2">Subir</span>
-                </div>
-                <div class="custom-file">
-                    <input type="file" class="custom-file-input form-control" id="inputBanner"
-                        aria-describedby="inputFile2">
-                    <label class="custom-file-label" for="inputBanner">Portada</label>
-                </div>
             </div>
 
             <div class="form-label-group">
@@ -86,15 +82,24 @@
 
         <div class="checkbox mb-3">
             <label>
-                <input type="checkbox" value="remember-me" required/> Acepto terminos y condiciones
+                <input type="checkbox" value="remember-me" required /> Acepto terminos y condiciones
             </label>
         </div>
-        <button class="btn btn-lg btn-outline-success btn-block" type="submit">
-            Ingresar
-        </button>
-        <a class="btn btn-lg btn-outline-danger btn-block" type="button" href="../index.html">
-            Cancelar
-        </a>
+
+        <div class="form-row">
+            <div class="col-6">
+                <a class="btn btn-lg btn-outline-danger btn-block" type="button" href="../index.html">
+                    Cancelar
+                </a>
+            </div>
+            <div class="col-6">
+                <button class="btn btn-lg btn-outline-success btn-block" type="submit">
+                    Ingresar
+                </button>
+            </div>
+        </div>
+
+
         <p class="mt-5 mb-3 text-muted text-center">2020-2020</p>
     </form>
     <script src="../js/jquery-3.4.1.js"></script>

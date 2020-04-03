@@ -65,7 +65,7 @@ var empresas = [
         {
           autor: "Maria",
           calificacion: "5/5",
-          descripcionComentario: "Excelente Oferta"
+          descripcionComentario: "Excelente Oferta, necesitamos mas ofertas asi."
         },
         {
           autor: "Juan Gabriel",
@@ -99,10 +99,13 @@ for (let i = 0; i < empresas.length; i++) {
   <h2>
       ${empresas[i].nombreEmpresa}
   </h2>
-  <div class="bannerEmpresa align-items-center"
-      style="background: url(../img/${empresas[i].banner}); min-height: 80vh; background-repeat: no-repeat; width: 100%; background-size: cover; text-align: center; object-fit:cover;">
+  <div class="bannerEmpresa"
+      style="
+        background-image: url(../img/${empresas[i].banner});">
+        <div class="bannerContenido ">
       <img src="../img/${empresas[i].logotipo}" alt=""
-          class="img-thumbnail rounded-circle mx-auto d-block" style="height: 200px;">
+          class="img-thumbnail rounded-circle" style="height: 200px;">
+          </div>
   </div>
   </div>
   `;
