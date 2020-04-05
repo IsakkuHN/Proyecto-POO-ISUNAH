@@ -10,79 +10,92 @@
 </head>
 
 <body>
-  <!--Navbar-->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"><img src="img/01-16-___logo2.png" style="height: 50px;"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Foxer<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Tienda</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Acceder
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ventanaModal">Iniciar Sesion</a>
-            <a class="dropdown-item" href="#">Crear Cuenta para Cliente</a>
-            <a class="dropdown-item" href="html/signInEmpresa.html">Crear Cuenta para Empresa</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="..." aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
-    </div>
-  </nav>
+  <!--Navbar-->
+  <div id="navegacion-bar">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#"><img src="img/01-16-___logo2.png" style="height: 50px;"></a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Foxer<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tienda</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Acceder
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#" data-toggle="modal" data-target="#ventanaModal">Iniciar Sesion</a>
+              <a class="dropdown-item" href="#">Crear Cuenta para Cliente</a>
+              <a class="dropdown-item" href="html/signInEmpresa.html">Crear Cuenta para Empresa</a>
+            </div>
+          </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="..." aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0 mr-sm-2" type="button">Buscar</button>
+          <button class="btn btn-outline-success my-2 my-sm-0 " type="button">
+            <i class="fas fa-shopping-cart"></i>
+          </button>
+        </form>
+      </div>
+    </nav>
+  </div>
+
 
   <!--Ventana Modal-->
-  <div class="modal fade" id="ventanaModal" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Iniciar Sesion</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body" id="contenidoll-modal">
-          
-           <div class="form-label-group">
-            <input type="email" id="inputEmail" class="form-control" placeholder="Correo Electronico" required
+  <div id="modal-section">
+    <div class="modal fade" id="ventanaModal" data-backdrop="static" tabindex="-1" role="dialog"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Iniciar Sesion</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="contenidoll-modal">
+
+            <div class="form-label-group">
+              <input type="email" id="inputEmailLogin" class="form-control" placeholder="Correo Electronico" required
                 autofocus />
-            <label for="inputEmail">Correo Electronico</label>
-        </div>
+              <label for="inputEmail">Correo Electronico</label>
+            </div>
 
-        <div class="form-label-group">
-            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required />
-            <label for="inputPassword">Contraseña</label>
-        </div>
+            <div class="form-label-group">
+              <input type="password" id="inputPasswordLogin" class="form-control" placeholder="Contraseña" required />
+              <label for="inputPassword">Contraseña</label>
+            </div>
 
-        <div class="checkbox mb-3">
-            <label>
+            <div class="checkbox mb-3">
+              <label>
                 <input type="checkbox" value="remember-me" /> Recordar Usuario
-            </label>
-        </div>
+              </label>
+            </div>
 
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-outline-success" >Iniciar Sesion</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-danger" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-outline-success" onclick="comprobarLogin()">Iniciar Sesion</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
+
+
 
   <!--Contenido-->
   <div class="container">
@@ -99,13 +112,13 @@
               possimus totam tenetur, consequatur, qui et veritatis fugiat reiciendis, sapiente repellat!
             </p>
           </div>
-
         </div>
       </div>
     </div>
   </div>
 
   <!--Scripts-->
+  <script src="https://kit.fontawesome.com/ac019ea245.js" crossorigin="anonymous"></script>
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/bootstrap.js"></script>
   <script src="js/controlador.js"></script>
