@@ -142,7 +142,7 @@ for (let i = 0; i < empresas.length; i++) {
                         dy=".3em">140x140</text>
                 </svg><h1></h1><br>
                 <h2>${empresas[i].productos[j].nombreProducto}</h2><br>
-                    <button class="btn btn-outline-danger" href="#" role="button" data-target="#ventanaModalEmpresa"
+                    <button class="btn btn-outline-danger" href="#" role="button" data-target=".bd-example-modal-lg"
                         data-toggle="modal" onclick="descripcionProductoModal(id)" id="${empresas[i].productos[j].nombreProducto}" value="${empresas[i].productos[j].nombreProducto}">Ver Mas »
                     </button>
             </div>
@@ -163,16 +163,17 @@ function descripcionProductoModal(identidad) {
           let comments = "";
           for (let m = 0; m < interno.length; m++) {
             comments +=
-              `<h6>
+              `<h6><b>
             ${interno[m].autor}
-          </h6>
+          </b></h6>
           <h6>
             ${interno[m].calificacion}
           </h6>
-          <h6>
+          <h6><em>
             ${interno[m].descripcionComentario}
-          </h6><br>`;
+          </em></h6><br>`;
           }
+
           document.getElementById("ventanaModalEmpresa").innerHTML = `
           <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -193,16 +194,16 @@ function descripcionProductoModal(identidad) {
                         </svg>
                     </div>
 
-                    <h3>Descripcion</h3>
+                    <h5>Descripcion</h5>
                     <p>
                     ${empresas[i].productos[j].descripcionProducto}
                     </p>
-                    <h2>Duracion de la Oferta</h2>
+                    <h5>Duracion de la Oferta</h5>
                       <p>
                         ${empresas[i].productos[j].fechaInicio} - ${empresas[i].productos[j].fechaFinal}
                       </p>
-
-                    <h2>Comentarios</h2>
+                    <h1></h1><br>
+                    <h5>Comentarios</h5>
                     ${comments}
 
                 </div>
@@ -231,6 +232,7 @@ function descripcionProductoModal(identidad) {
 }
 
 function comprobarLogin() {
+  
   let bandera = false;
   let usuario = document.getElementById("inputEmailLogin").value;
   let contrasenia = document.getElementById("inputPasswordLogin").value;
@@ -261,7 +263,7 @@ function comprobarLogin() {
     document.getElementById("navegacion-bar").innerHTML = "";
     document.getElementById("navegacion-bar").innerHTML = `
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#"><img src="img/01-16-___logo2.png" style="height: 50px;"></a>
+      <a class="navbar-brand" href="#"><img src="../img/01-16-___logo2.png" style="height: 50px;"></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -294,7 +296,3 @@ function comprobarLogin() {
 
   }
 }
-
-(function cargarNav() {
-  document.getElementById("navegacion-bar-perfil").innerHTML = comprobarLogin();
-})();
